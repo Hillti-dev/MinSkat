@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MinSkat</title>   <!-- Titel der Seite (wird in der Tab übersicht angezeigt) -->
+  <meta name="description" content="MinSkat ist ein skandinavisches Frauenmode- und Accessoires-Geschäft im Herzen von Münster, das sich auf hochwertige Produkte spezialisiert hat. Entdecken Sie unsere einzigartige Auswahl an Kleidung, Mode, Schmuck und Accessoires." />  <!-- Hier eine kurze Beschreibung der Seite eintragen -->
+  <meta name="keywords" content="MinSkat, skandinavische Mode, Accessoires, Frauenmode, Münster, Kleidung, Schmuck, Mode, Averbeck, Hillmann, skandinavien, zeitlos, Geschäft" />  <!-- Hier relevante Schlüsselwörter eintragen, damit die Seite besser gefunden wird -->
+  <meta name="author" content="Tim Hillmann" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="MinSkat" />
+  <meta property="og:description" content="MinSkat ist ein skandinavisches Mode geschäft für Frauen" />
+  <meta property="og:image" content="assets/logo.png" />  <!-- Hier ein Bild eintragen, das angezeigt wird, wenn die Seite in sozialen Medien geteilt wird -->
+  <meta property="og:url" content="https://www.min-skat.de" />  <!-- Hier die URL der Seite eintragen BITTE ANPASSEN -->
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo" style="height: 48px; width: 120px; margin-right: 10px;" />  <!-- im assets Ordner eine logo.png einfügen -->
+      <div>
+        <p class="brand-label">MinSkat</p> <!-- Hier den Namen des Geschäfts eintragen -->
+        <p class="brand-subtitle">Skandinavische Mode und Accessoires für Frauen</p>  <!-- Hier ein kurzes Motto oder eine Beschreibung eintragen -->
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="Navigation öffnen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav">   <!-- Navigationsleiste den a tag kopieren und einem objekt eine id mit id="idname" und dann den # mit #idname ersetzen-->
+      <a href="#top">Start</a>
+      <a href="#infos">Info</a>   <!-- zwischen den a tags einfügen was darauf stehen soll z.B. <a href="#idname">Aufschrift</a> -->
+      <a href="#oeffnungszeiten">Öffnungszeiten</a>
+      <!-- Hier bestseller einfügen -->
+      <a href="#team">Mitarbeiter</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <p class="eyebrow">Unser Geschäft:</p>
+            <h1>MinSkat</h1>
+            <p>Wir sind ein skandinavisches Frauenmode- und Accessoires-Geschäft im Herzen von Münster, das sich auf hochwertige Produkte spezialisiert hat.</p>
+            <div class="hero-actions">
+                <a href="#infos" class="button button-primary">Mehr erfahren</a>  <!-- zweite navbar führt zu den ersten infos und kontakt -->
+                <a href="#kontakt" class="button button-secondary">Kontakt aufnehmen</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-box">
+                <img src="assets/logo.png" alt="Logo" class="hero-image" style="width: 100%;"/>
+                <h3>MinSkat mein Schatz</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="infos">
+      <div class="section-header">
+        <p class="eyebrow">Über uns</p>
+        <h2>Das ist MinSkat</h2>
+      </div>
+
+      <article class="info-card">
+        <div class="info-card__media">
+          <img src="assets/IMG_7454.PNG" alt="Info1" />
+        </div>
+        <div class="info-card__content">
+          <span class="tag">Unser Ziel</span>
+          <h3>Ihr Schatz</h3>
+          <p>Min Skat bedeutet auf deutsch "Mein Schatz" und das sollen Sie auch bei uns finden, Ihren eigenen Schatz. In unserem großem Sortiment finden wir auch etwas passendes für Sie!</p>
+        </div>
+      </article>
+
+      <article class="info-card reverse">
+        <div class="info-card__media">
+          <img src="assets/IMG_7452.PNG" alt="Info2" />
+        </div>
+        <div class="info-card__content">
+          <span class="tag">t</span>
+          <h3>Titel 2</h3>
+          <p>Text 2</p>
+        </div>
+      </article>
+
+      <article class="info-card">
+        <div class="info-card__media">
+          <img src="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?auto=format&fit=crop&w=900&q=80" alt="Info3" />
+        </div>
+        <div class="info-card__content">
+          <span class="tag">Thema 3 z.B. kontakt</span>
+          <h3>Titel 3</h3>
+          <p>Text 3</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section section-alt" id="oeffnungszeiten">
+      <div class="section-header">
+        <p class="eyebrow">Besuchen Sie uns</p>
+        <h2>Öffnungszeiten</h2>
+      </div>
+
+      <div class="opening-hours-grid">
+        <div class="opening-hours-card">
+          <h3>Montag - Freitag</h3>
+          <p class="hours">10:00 - 18:00 Uhr</p>
+        </div>
+        <div class="opening-hours-card">
+          <h3>Samstag</h3>
+          <p class="hours">11:00 - 17:00 Uhr</p>
+        </div>
+        <div class="opening-hours-card closed">
+          <h3>Sonntag</h3>
+          <p class="hours">Geschlossen</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt best-sellers" id="bestseller">
+      <div class="section-header">
+        <p class="eyebrow">Best Seller</p>
+        <h2>Unsere beliebtesten Produkte</h2>
+        <p class="section-description">Hier findest du unsere beliebtesten und meistverkauften Produkte</p>
+      </div>
+
+      <div class="best-sellers-grid">
+        <article class="product-card product-card--small" data-images="assets/wemmbu.png,assets/flamefrags.png">
+          <div class="product-media">
+            <button class="image-switch image-switch--prev" aria-label="Vorheriges Bild">‹</button>
+            <img src="assets/wemmbu.png" alt="Bestseller 1" />
+            <button class="image-switch image-switch--next" aria-label="Nächstes Bild">›</button>
+          </div>
+          <div class="product-info">
+            <h3>Bestseller 1</h3>
+            <p>Beschreibung 1</p>
+          </div>
+        </article>
+
+        <article class="product-card product-card--small" data-images="assets/wemmbu.png,assets/flamefrags.png">
+          <div class="product-media">
+            <button class="image-switch image-switch--prev" aria-label="Vorheriges Bild">‹</button>
+            <img src="assets/wemmbu.png" alt="Bestseller 2" />
+            <button class="image-switch image-switch--next" aria-label="Nächstes Bild">›</button>
+          </div>
+          <div class="product-info">
+            <h3>Bestseller 2</h3>
+            <p>Beschreibung 2</p>
+          </div>
+        </article>
+
+        <article class="product-card product-card--small" data-images="assets/wemmbu.png,assets/flamefrags.png">
+          <div class="product-media">
+            <button class="image-switch image-switch--prev" aria-label="Vorheriges Bild">‹</button>
+            <img src="assets/wemmbu.png" alt="Bestseller 3" />
+            <button class="image-switch image-switch--next" aria-label="Nächstes Bild">›</button>
+          </div>
+          <div class="product-info">
+            <h3>Bestseller 3</h3>
+            <p>Beschreibung 3</p>
+          </div>
+        </article>
+        <article class="product-card product-card--small" data-images="assets/wemmbu.png,assets/flamefrags.png">
+          <div class="product-media">
+            <button class="image-switch image-switch--prev" aria-label="Vorheriges Bild">‹</button>
+            <img src="assets/wemmbu.png" alt="Bestseller 4" />
+            <button class="image-switch image-switch--next" aria-label="Nächstes Bild">›</button>
+          </div>
+          <div class="product-info">
+            <h3>Bestseller 4</h3>
+            <p>Beschreibung 4</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="team">
+      <div class="section-header">
+        <p class="eyebrow">Team</p>
+        <h2>Unsere Mitarbeiter</h2>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-avatar">
+            <img src="assets/Team1.png" alt="Mitarbeiter 1" />  <!-- Bild in src="" einfügen mit datei pfard oder link -->
+          </div>
+          <h3>Melanie Averbeck</h3>   <!-- Name des Mitarbeiters -->
+          <p>Geschäftsführung</p>  <!-- Position oder Verantwortungsbereich des Mitarbeiters -->
+        </article>
+        <article class="team-card">
+          <div class="team-avatar">
+            <img src="assets/Team2.png" alt="Mitarbeiter 2" />
+          </div>
+          <h3>Carla Gödecke</h3> <!-- Name des Mitarbeiters -->
+          <p>Mitarbeiterin</p>  <!-- Position oder Verantwortungsbereich des Mitarbeiters -->
+        </article>
+        <article class="team-card">
+          <div class="team-avatar">
+            <img src="assets/Team3" alt="Mitarbeiter 3" />  
+          </div>
+          <h3>Annette Stehlig</h3> <!-- Name des Mitarbeiters -->
+          <p>Mitarbeiterin</p>  <!-- Position oder Verantwortungsbereich des Mitarbeiters -->
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="section-header">
+        <p class="eyebrow">So erreichen Sie uns</p>
+        <h2>Kontakt</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>E-Mail</h3>
+          <p><a href="mailto:Melanie@min-skat.de">Melanie@min-skat.de</a></p>  <!-- beide Email adressen anpassen -->
+        </div>
+        <div class="contact-card">
+          <h3>Telefon</h3>
+          <p><a href="tel:+4925198166971">+49 251 98166971</a></p>  <!-- beide telefonnummern anpassen -->
+        </div>
+        <div class="contact-card">
+          <h3>Adresse</h3>
+          <p>Julius-Voos-Gasse 6<br>48155 Münster</p>   <!-- Hier die Adresse eintragen und hinter dem <br> postleitzahl und Stadt eintragen -->
+        </div>
+        <div class="contact-card" style="grid-column: span 2; display: none;">
+          <h3>Web developer</h3>
+          <p>Tim Hillmann</p>
+          <p>Bei Rückfragen Email an: <a href="mailto:hillmann.webdesign@gmail.com">hillmann.webdesign@gmail.com</a></p>
+          <p>Es wird keine Haftung für Inhalte übernommen. <a href="impressum.html#dev">Siehe Impressum</a></p>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="#top">Start</a>
+      <a href="#infos">Info</a>
+      <a href="#team">Team</a>
+      <a href="#oeffnungszeiten">Öffnungszeiten</a>
+      <a href="impressum.html">Impressum</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/min_skat_muenster?igsh=MTV2d2k2c3NsYW1rZw==" target="_blank" rel="noreferrer" class="instagram-button"> <!-- Öffnen des Instagram Profils -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.75 2.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/> <!-- Instagram Logo -->
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
