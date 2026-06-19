@@ -616,3 +616,71 @@ button {
     padding: 2rem 1.25rem;
   }
 }
+
+/* Mobile-specific tweaks when device is detected as phone */
+.is-mobile .hero {
+  grid-template-columns: 1fr;
+  padding: 2rem 1rem 1rem;
+}
+
+.is-mobile .hero-visual {
+  min-height: 200px;
+  display: block;
+}
+
+.is-mobile .hero-box {
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.is-mobile .brand-label {
+  font-size: 1.05rem;
+}
+
+.is-mobile .brand-subtitle {
+  display: none;
+}
+
+.is-mobile .hero-content p {
+  max-width: 100%;
+}
+
+.is-mobile .main-nav {
+  font-size: 1rem;
+}
+
+.is-mobile .product-card--small {
+  grid-column: span 12;
+}
+
+/* Additional mobile improvements */
+.is-mobile .button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.03rem;
+}
+
+.is-mobile #bestseller {
+  display: block;
+  padding: 1rem 0 2rem;
+}
+
+.is-mobile .main-nav a {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.is-mobile .image-switch {
+  width: 48px;
+  height: 48px;
+}
+
+.is-mobile .hero h1 {
+  font-size: 2rem;
+}
+
+.is-mobile .hero-visual::before {
+  background-size: 40%;
+}

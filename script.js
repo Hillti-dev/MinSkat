@@ -1,10 +1,64 @@
+// Mobile detection: adds `is-mobile` class to <body> when running on a phone
+function detectMobile() {
+  const ua = navigator.userAgent || '';
+  const uaMobile = /Mobi|Android|iPhone|iPod|IEMobile|Opera Mini|BlackBerry/i.test(ua);
+  const smallViewport = window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
+  return uaMobile || smallViewport;
+}
+
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 
+function updateMobileClass() {
+  if (detectMobile()) {
+    document.body.classList.add('is-mobile');
+  } else {
+    document.body.classList.remove('is-mobile');
+  }
+}
+
+// initialize and update on resize
+updateMobileClass();
+window.addEventListener('resize', () => {
+  updateMobileClass();
+});
+
 if (navToggle && mainNav) {
+  // ensure ARIA and ids
+  if (!mainNav.id) mainNav.id = 'main-navigation';
+  navToggle.setAttribute('aria-controls', mainNav.id);
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', navToggle.getAttribute('aria-label') || 'Navigation öffnen');
+
   navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('active');
-    navToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+    const isActive = mainNav.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', isActive);
+  });
+
+  // close when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!mainNav.classList.contains('active')) return;
+    if (mainNav.contains(target) || navToggle.contains(target)) return;
+    mainNav.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+
+  // close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+      mainNav.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // ensure menu closes when switching to desktop
+  window.addEventListener('resize', () => {
+    updateMobileClass();
+    if (!detectMobile() && mainNav.classList.contains('active')) {
+      mainNav.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
@@ -20,6 +74,7 @@ navLinks.forEach((link) => {
       }
       if (mainNav.classList.contains('active')) {
         mainNav.classList.remove('active');
+        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
       }
     }
   });
